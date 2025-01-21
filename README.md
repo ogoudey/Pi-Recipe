@@ -1,4 +1,6 @@
 # Ubuntu/Pi Recipe
+A basic recipe for Raspberry Pi that establishes control to a servo motor and to a DC motor.
+
 ## Steps
 1. flash Ubuntu onto the Raspberry Pi (`sudo apt install rpi-imager`, flash onto an SD card)
 2. with Ubuntu up and running, clone this repository (install github with `sudo apt install gh` to push changes)
