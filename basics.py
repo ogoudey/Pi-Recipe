@@ -1,38 +1,26 @@
-from gpiozero import AngularServo, Motor
+from gpiozero import Motor
 from time import sleep
 
 import math
 
 # run with: GPIOZERO_PIN_FACTORY=lgpio python3 basics.py
 
-try:
-    servo = AngularServo(17, min_angle=-30, max_angle=50)
-    _servo = True
-except Exception:
-    print("No servo!")
-    _servo = False
 
-try:
-    motor = Motor(27, 22)
-    _motor = True
-except Exception:
-    print("No motor!")
-    _motor = False
+motor_bl = Motor(17, 27)
+motor_fl = Motor(22, 23)
+motor_br = Motor(24, 25)
+motor_fr = Motor(5, 6)
 
 
-if _motor:
-    motor.forward()
-if _servo:
-    servo.min()
-
-
-while True:
-
+def test_motors():
+    motor_bl.forward()
+    sleep(1)
+    motor_fl.forward()
+    sleep(1)
+    motor_br.forward()
+    sleep(1)
+    motor_fr.forward()
+    sleep(1)
     
-    servo.angle += 5.0
-    for i in range(servo.min_angle, servo.max_angle):
-        servo.angle = i
-    
-        sleep(0.1)
-
+test_motors()
 
