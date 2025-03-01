@@ -15,12 +15,16 @@ motor_fr = Motor(5, 6)
 def test_motors():
     motor_bl.forward()
     sleep(1)
+    motor_bl.stop()
     motor_fl.forward()
     sleep(1)
+    motor_fl.stop()
     motor_br.forward()
     sleep(1)
+    motor_br.stop()
     motor_fr.forward()
     sleep(1)
+    motor_fr.stop()
     
 test_motors()
 
