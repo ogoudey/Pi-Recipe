@@ -11,10 +11,13 @@ class MyMotor:
         self.motor = Motor(num1, num2)
         pass
     def forward(self):
+        self.motor.forward()
         print("motor with pin ", str(self.num1), str(self.num2), "forward")
     def backward(self):
+        self.motor.backward()
         print("motor with pin ", str(self.num1), str(self.num2), "backward")
     def stop(self):
+        self.motor.stop()
         print("motor with pin ", str(self.num1), str(self.num2), "stopping")
 
 motor_bl = MyMotor(17, 27)
