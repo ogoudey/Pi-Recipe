@@ -1,13 +1,19 @@
-# Ubuntu/Pi Recipe
-A basic recipe for Raspberry Pi that establishes control to a servo motor and to a DC motor.
+# Context
+- Two DC motors host two spool of line which go through pulleys and swings the boom and the jib respectively.
+- One servo motor (somehow - TBD) is attached to a tiller.
 
-## Steps
-1. flash Ubuntu onto the Raspberry Pi (`sudo apt install rpi-imager`, flash onto an SD card)
-2. with Ubuntu up and running, clone this repository (install github with `sudo apt install gh` to push changes)
-3. make a python virtual environment (`python -m venv <new directory>`)
-4. install gpiozero with `pip` (might already be downloaded)
-5. (Added) install lgpio, also, with `pip install lgpio`
-6. wire it up (details omitted):
-![image](https://github.com/user-attachments/assets/76ceeb83-6689-4fa1-95b3-ca36498acbe4)
+## Testing Context
+- The lines raise/lower two washers, respectively.
+- The servo just rotates min/max.
 
-7. Run it with `GPIOZERO_PIN_FACTORY=lgpio python3 basics.py`
+## Running
+With the full setup
+```
+import actuators1 as a
+a.down() # moves washer1 down
+a.up() # moves washer1 up
+a.up2() # moves washer2 up
+a.down2() # moves washer2 down
+a.right() # servo
+a.left()
+```
