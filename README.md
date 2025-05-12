@@ -1,8 +1,8 @@
-# Context
+# Setup
 - Two DC motors host two spool of line which go through pulleys and swings the boom and the jib respectively.
 - One servo motor (somehow - TBD) is attached to a tiller.
 
-## Testing Context
+## Testing Setup
 - The lines raise/lower two washers, respectively.
 - The servo just rotates min/max.
 
